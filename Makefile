@@ -1,4 +1,4 @@
-VERSION=$(shell python -c 'from qotm import qotm; print(qotm.__version__)')
+VERSION=$(shell python3 -c 'from qotm import qotm; print(qotm.__version__)')
 DOCKER_PREFIX=$(shell if [ $$DOCKER_REGISTRY = "-" ]; then echo ""; else echo "$$DOCKER_REGISTRY/"; fi)
 
 all: docker-image
